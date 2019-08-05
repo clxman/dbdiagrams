@@ -1,0 +1,60 @@
+#!/usr/bin/env python
+import psycopg2
+import configparser
+import pandas as pd
+
+
+def get_code(sql, conn):
+	"""
+		Uses information schema to generate dbdiagrams 
+			ER diagram code
+		Parameters : 
+			sql - sql string of information schema
+			conn - db connection
+		Returns : 
+			code - dbdiagrams' code
+	"""
+	df = pd.read_sql(sql, conn)
+	tables = df['table_name'].unique()
+	code = ''
+	for table in tables:
+		code = code + str.format('\n\nTable {} {{\n', table) 
+		tdf = df[df['table_name'] == table]
+		columns_code = ''
+		for index, row in tdf.iterrows():
+			is_pk = '[pk]' if row.is_pk == 1 else ''
+			columns_code = columns_code + str.format('{} {} {}\n', row.column_name, row.datatype, is_pk)
+		code = code + columns_code + '}'
+	code = code + get_refs(df)
+	return code
+
+
+def get_refs(df):
+	"""
+		Returns the references part of dbdiagrams code
+	"""
+	refs = '\n\n'
+	pks_df = df[df['is_pk'] == 1]
+	non_pks_df = df[df['is_pk'] == 0]
+	for index, row in pks_df.iterrows():
+		for n_index, nrow in non_pks_df.iterrows():
+			if nrow.column_name == row.column_name:
+				refs = refs + str.format('Ref: {}.{} < {}.{}\n', 
+						row.table_name, row.column_name, nrow.table_name, nrow.column_name)
+	return refs
+
+
+def main():
+	config = configparser.ConfigParser()
+	config.read('settings.conf')
+	conn_string = config['Common']['conn_string']
+	sql = config['SQL']['query']
+	out_file = config['Common']['output_filepath']
+	conn = psycopg2.connect(conn_string)
+	code = get_code(sql, conn)
+	with open(out_file, "w") as text_file:
+		text_file.write(code)
+	print("Success! generated code saved in output file")
+
+if __name__ == '__main__':
+    main()
