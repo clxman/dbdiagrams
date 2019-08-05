@@ -1,5 +1,5 @@
 # dbdiagrams
-code generator for dbdiagrams.io from postgres
+code generator for dbdiagram.io from postgres
 
 
 ### setup
