@@ -4,17 +4,19 @@ code generator for dbdiagram.io from postgres
 
 ### setup
 required : python3
+
+1. (optional) - use python virtual environment :
+```bash
+python -m venv env
+source /env/bin/activate
+```
+
+2. install pre-requisite installation for psycopg2 (you could also install postgresql, otherwise libpq-dev and python-dev work):
 ```bash
 sudo apt-get install libpq-dev python-dev 
 pip install -r requirements.txt
 ```
 
-recommended - use python virtual environment :
-```bash
-python -m venv env
-source /env/bin/activate
-```
-then follow the above setup steps
 
 
 ### generating the code
