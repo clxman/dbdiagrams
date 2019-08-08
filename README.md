@@ -14,7 +14,7 @@ recommended - use python virtual environment :
 python -m venv env
 source /env/bin/activate
 ```
-Then follow the above setup steps
+then follow the above setup steps
 
 
 ### generating the code
