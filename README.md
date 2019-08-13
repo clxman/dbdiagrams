@@ -1,5 +1,8 @@
-# dbdiagrams
-code generator for dbdiagram.io from postgres
+# dbdiagrams 
+
+this tool helps you quickly generate beautiful database/ER diagrams for your postgres db schema :
+- the script auto-generates the code by detecting postgres db schema
+- this code can be then copy pasted onto an online tool called dbdiagram.io
 
 
 ### setup
