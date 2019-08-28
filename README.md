@@ -8,7 +8,7 @@ this tool helps you quickly generate beautiful database/ER diagrams for your pos
 ### setup
 required : python3
 
-(NOTE: in case your /usr/bin/python points to python2, you can do following to point it to python3 or if /usr/bin/python doesn't point to anything then just run the second command only)
+(NOTE: in case your ```/usr/bin/python`` points to python2, you can do following to point it to python3 or if ```/usr/bin/python``` doesn't point to anything then just run the second command only)
 ```
 sudo rm /usr/bin/python
 sudo ln -s /usr/bin/python3 /usr/bin/python
