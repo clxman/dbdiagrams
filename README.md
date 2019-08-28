@@ -27,7 +27,7 @@ sudo apt-get install libpq-dev python3-dev
 pip install -r requirements.txt
 ```
 
-### parameters
+### settings.conf ```Common``` parameters
 - conn_string : this is a database connection string setting
 - table_schema : default set to public
 - exclude_views : true/false to include/exclude views in the diagram
