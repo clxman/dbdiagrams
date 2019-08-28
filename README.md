@@ -8,6 +8,12 @@ this tool helps you quickly generate beautiful database/ER diagrams for your pos
 ### setup
 required : python3
 
+(NOTE: in case your /usr/bin/python points to python2, you can do following to point it to python3 or if /usr/bin/python doesn't point to anything then just run the second command only)
+```
+sudo rm /usr/bin/python
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+
 1. git clone https://github.com/nsingla/dbdiagrams.git
 
 2. cd dbdiagrams
@@ -20,7 +26,7 @@ source /env/bin/activate
 
 4. install pre-requisite installation for psycopg2 (you could also install postgresql, otherwise libpq-dev and python-dev work):
 ```bash
-sudo apt-get install libpq-dev python-dev 
+sudo apt-get install libpq-dev python3-dev 
 pip install -r requirements.txt
 ```
 
