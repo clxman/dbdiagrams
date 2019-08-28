@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 
 ### generating the code
-- update all the parameters carefully in settings.conf
+- update all the ```Common``` parameters carefully in settings.conf
 - run ./generate_code
 - copy the generated code from the output file and visit dbdiagram.io [website](https://dbdiagram.io/d), once on the diagram page - paste it onto the code panel on the left. This should generate the diagram, make sure all the info is as desired - specially the references/table relationships. 
 - you can screenshot the diagram and save image file or you can create an account if you like the tool (i've no affiliation) !
