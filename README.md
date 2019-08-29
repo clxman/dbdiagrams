@@ -6,9 +6,9 @@ this tool helps you quickly generate beautiful database/ER diagrams for your pos
 
 
 ### setup
-required : python3
+required : [python3](https://docs.python-guide.org/starting/install3/linux/), [pip3](https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/)
 
-(NOTE: in case your ```/usr/bin/python``` doesn't point to anything then just run ```sudo ln -s /usr/bin/python3 /usr/bin/python``` and if you've multiple versions please use python3 instead of python in all the steps and change first line of generate_code to ```#!/usr/bin/env python3```
+(NOTE: in case your ```/usr/bin/python``` doesn't point to anything then just run ```sudo ln -s /usr/bin/python3 /usr/bin/python``` and if you've multiple versions and your python is pointed to python2 and not python3, please use python3/pip3 instead of python/pip in all the steps and change first line of generate_code to ```#!/usr/bin/env python3```
 
 
 1. git clone https://github.com/nsingla/dbdiagrams.git
