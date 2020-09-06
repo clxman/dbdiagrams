@@ -18,7 +18,7 @@ required : [python3](https://docs.python-guide.org/starting/install3/linux/), [p
 3. (optional) - use python virtual environment :
 ```bash
 python -m venv env
-source /env/bin/activate
+source ./env/bin/activate
 ```
 
 4. install pre-requisite installation for psycopg2 (you could also install postgresql, otherwise libpq-dev and python-dev work):
