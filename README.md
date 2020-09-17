@@ -40,3 +40,17 @@ pip install -r requirements.txt
 - run ./generate_code
 - copy the generated code from the output file and visit dbdiagram.io [website](https://dbdiagram.io/d), once on the diagram page - paste it onto the code panel on the left. This should generate the diagram, make sure all the info is as desired - specially the references/table relationships. 
 - you can screenshot the diagram and save image file or you can create an account if you like the tool (i've no affiliation) !
+### 数据库设计工具(数据库展示)
+ - 目标  
+  　-　建立比较漂亮的表关系结构
+  　-   可以从pg的数据库导出表结构
+ - 工具：dbdiagram.io    
+    - 支持外键，索引等，还支持导出为PG,mysql，sql_server
+
+  [使用链接](https://dev.to/techschoolguru/design-db-schema-and-generate-sql-code-with-dbdiagram-io-4ko5)
+   
+   - 以下git库可以导出pg的库，格式转换为dbdiagram.io的语法。
+      https://github.com/nsingla/dbdiagrams.git
+
+
+
